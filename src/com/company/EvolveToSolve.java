@@ -51,8 +51,10 @@ public class EvolveToSolve {
             attemptNext = "";
             // Kollar igenom varje char.
             for (int i = 0; i <= target.length() -1; i++){
+                // Om en char inte stämmer.
                 if(attemptThis.charAt(i) != target.charAt(i)) {
                     completed = false;
+                    // Sätt en ny random på nästa attempt.
                     attemptNext += returnRandomChar(possibleCharacters);
                 }
                 else
